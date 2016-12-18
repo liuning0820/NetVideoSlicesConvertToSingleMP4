@@ -18,7 +18,7 @@ REM set /p input=Please input the path fileslist:
 @echo off
 set /p input=<result.txt
  echo.%input% 
-pause
+
  del result.txt
 
 PUSHD  C:\Users\niliu\Downloads\mergefils\
@@ -38,8 +38,6 @@ REM %ffmpeg% -i "concat:1.ts|2.ts|3.ts|4.ts|5.ts" -c copy -bsf:a aac_adtstoasc o
 %ffmpeg% -i %input% -c copy -bsf:a aac_adtstoasc %outputFileName%.mp4
 
 echo "Wait for 10 seconds"
-
-pause
 
 if not exist %outputFileName%.mp4 goto end
 move %outputFileName%.mp4 \\192.168.0.100\32gusb\LNVideo\
